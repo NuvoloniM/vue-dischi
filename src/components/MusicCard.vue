@@ -27,10 +27,10 @@ export default {
         flex-basis: calc( (100% / 5) - 20px);
         padding: 0;
         background: $primary-color;
-        margin: 10px;
+        margin: 20px 10px;
 
         .card-body {
-            padding: 5px;
+            padding: 10px;
             text-align: center;
 
             h5 {

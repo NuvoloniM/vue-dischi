@@ -37,4 +37,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 
+    div {
+        padding: 40px 0;
+    }
 </style>
