@@ -5,7 +5,7 @@
     </header>
     <main>
       <div class="container">
-        <div class="row"></div>
+        <MusicsComp/>
       </div>
     </main>
   </div>
@@ -14,11 +14,13 @@
 <script>
 import "bootstrap";
 import LogoComp from "./components/LogoComp.vue";
+import MusicsComp from "./components/MusicsComp.vue";
 
 export default {
   name: 'App',
   components: {
-    LogoComp
+    LogoComp,
+    MusicsComp
   }
 }
 </script>
@@ -31,7 +33,6 @@ header {
 }
 main {
   background: $secondary_color;
-  height: calc( 100vh - 50px);
 }
 
 </style>
