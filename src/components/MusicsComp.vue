@@ -1,5 +1,6 @@
 <template>
-    <div class="row">
+    <div>
+        <div v-if="musicArray.length >= 10" class="row">
         <MusicCard 
         v-for="( element, index) in musicArray"
         :key="index"
@@ -8,7 +9,12 @@
         :title="element.title"
         :author="element.author"
         />
+        </div>
+        <div v-else>
+            <h2>LOADING</h2>
+        </div>
     </div>
+    
 </template>
 
 <script>

@@ -33,6 +33,8 @@ header {
 }
 main {
   background: $secondary_color;
+  height: 100vh;
+  overflow: auto;
 }
 
 </style>
