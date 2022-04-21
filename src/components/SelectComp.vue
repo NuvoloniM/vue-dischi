@@ -1,7 +1,12 @@
 <template>
     <div>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Choose to filter by genre</option>
+        <select 
+        v-model="selected" 
+        class="form-select" 
+        aria-label="Default select example"
+        @click.prevent="$emit( 'selectFunction', selected )"
+        >
+            <option value="" selected>Choose to filter by genre</option>
             <option value="Rock">Rock</option>
             <option value="Pop">Pop</option>
             <option value="Jazz">Jazz</option>
@@ -12,7 +17,15 @@
 
 <script>
 export default {
-    name: 'SelectComp'
+    name: 'SelectComp',
+    data() {
+        return {
+            selected: '',
+        }
+    },
+    methods: {
+
+    }
 }
 </script>
 

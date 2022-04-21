@@ -2,11 +2,15 @@
   <div id="app">
     <header class="d-flex justify-content-between align-items-center">
       <LogoComp/>
-      <SelectComp/>
+      <SelectComp 
+      @selectFunction="selectedFunction"
+      />
     </header>
     <main>
       <div class="container">
-        <MusicsComp/>
+        <MusicsComp
+        :valore="this.selectedValue"
+        />
       </div>
     </main>
   </div>
@@ -20,11 +24,23 @@ import MusicsComp from "./components/MusicsComp.vue";
 
 export default {
   name: 'App',
+  data(){
+    return {
+      selectedValue:'',
+    }
+  },
   components: {
     LogoComp,
     MusicsComp,
     SelectComp,
-  }
+  },
+  methods: {
+    selectedFunction( testo ) {
+      console.log(testo);
+      this.selectedValue = testo;
+      console.log(this.selectedValue);
+    }
+  },
 }
 </script>
 

@@ -2,13 +2,12 @@
     <div>
         <div v-if="musicArray.length >= 10" class="row">
         <MusicCard 
-        v-for="( element, index) in musicArray"
+        v-for="( element, index) in filterMusic()"
         :key="index"
         :poster="element.poster"
         :year="element.year"
         :title="element.title"
         :author="element.author"
-        :genre="element.genre"
         />
         </div>
         <div v-else>
@@ -28,10 +27,13 @@ export default {
     components: {
         MusicCard,
     },
-    data(){
+    data() {
         return {
             musicArray: [],
         }
+    },
+    props: {
+        valore: String,
     },
     created(){
         axios.get( 'https://flynn.boolean.careers/exercises/api/array/music' )
@@ -39,6 +41,17 @@ export default {
                 this.musicArray = res.data.response;
             }
         )
+    },
+    methods: {
+        filterMusic(){
+            if( this.valore == ""){
+                return this.musicArray;    
+            } else {
+                return this.musicArray.filter( (elem) => {
+                    return elem.genre.toLowerCase().includes(this.valore.toLowerCase());
+                } )
+            }
+        }
     }
 }
 </script>
