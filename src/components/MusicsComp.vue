@@ -46,4 +46,8 @@ export default {
     div {
         padding: 40px 0;
     }
+    h2 {
+        color: #fff;
+        text-align: center;
+    }
 </style>
