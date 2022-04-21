@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <header>
+    <header class="d-flex justify-content-between align-items-center">
       <LogoComp/>
+      <SelectComp/>
     </header>
     <main>
       <div class="container">
@@ -14,13 +15,15 @@
 <script>
 import "bootstrap";
 import LogoComp from "./components/LogoComp.vue";
+import SelectComp from "./components/SelectComp.vue";
 import MusicsComp from "./components/MusicsComp.vue";
 
 export default {
   name: 'App',
   components: {
     LogoComp,
-    MusicsComp
+    MusicsComp,
+    SelectComp,
   }
 }
 </script>

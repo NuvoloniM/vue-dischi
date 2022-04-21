@@ -8,6 +8,7 @@
         :year="element.year"
         :title="element.title"
         :author="element.author"
+        :genre="element.genre"
         />
         </div>
         <div v-else>
