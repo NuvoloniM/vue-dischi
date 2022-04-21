@@ -44,7 +44,7 @@ export default {
 <style lang="scss" scoped>
 
     div {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     h2 {
         color: #fff;
